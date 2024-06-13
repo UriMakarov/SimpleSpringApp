@@ -4,8 +4,6 @@ import com.colvir.homework.simpleApp.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-
 @RestController
 @RequestMapping("/employees")
 public class EmployeeController {
@@ -17,10 +15,10 @@ public class EmployeeController {
         this.employeeService = employeeService;
     }
 
-    @GetMapping
-    public List<Employee> getAllEmployees() {
-        return employeeService.findAll();
-    }
+//    @GetMapping
+//    public List<Employee> getAllEmployees() {
+//        return employeeService.findAll();
+//    }
 
     @PostMapping
     public Employee addEmployee(@RequestBody Employee employee) {
